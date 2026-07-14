@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page">
+
+    <!-- ==========================================
+        HERO
+    =========================================== -->
+
+    <div class="hero">
+
+        <h1>
+            <i class="fa-solid fa-shield-halved"></i>
+            Sentinel AI
+        </h1>
+
+        <p>
+            AI Powered Investigation Copilot for Uttar Pradesh Police
+        </p>
+
+    </div>
+
+    <!-- ==========================================
+        INPUT CARD
+    =========================================== -->
+
+    <div class="glass input-card">
+
+        <h2 style="margin-bottom:20px;">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            Complaint Intelligence
+
+        </h2>
+
+        <textarea
+
+            id="complaintText"
+
+            placeholder="Paste Complaint Here...
+
+Example:
+
+My name is Rahul Sharma.
+
+My motorcycle UP78AB1234 was stolen yesterday near Kidwai Nagar while I was shopping.
+
+Please contact me on 9876543210.
+
+The vehicle cost ₹55000."
+
+        ></textarea>
+
+        <div class="action-row">
+
+            <button
+
+                id="analyzeBtn"
+
+                class="primary-btn">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Analyze Complaint
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+        AI THINKING
+    =========================================== -->
+
+    <div
+
+        id="thinkingCard"
+
+        class="glass"
+
+    >
+
+        <h2>
+
+            <i class="fa-solid fa-microchip"></i>
+
+            Sentinel AI Processing
+
+        </h2>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Reading Complaint
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Understanding Context
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Extracting Information
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Identifying Crime Category
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Generating Investigation Strategy
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-step">
+
+            <div class="step-dot"></div>
+
+            <span style="width:220px;">
+
+                Preparing Draft FIR
+
+            </span>
+
+            <div class="progress">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================
+        RESULTS
+    =========================================== -->
+
+    <div
+
+        id="results"
+
+    >
+
+    </div>
+
+</div>
+
+{% endblock %}
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/complaint.js') }}"></script>
+
+{% endblock %}

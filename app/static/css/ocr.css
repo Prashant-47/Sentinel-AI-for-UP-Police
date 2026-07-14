@@ -1,0 +1,287 @@
+/*=========================================================
+                    OCR PAGE
+=========================================================*/
+
+.ocr-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/*=========================================================
+                UPLOAD CARD
+=========================================================*/
+
+.upload-card{
+
+    padding:35px;
+
+}
+
+.upload-area{
+
+    border:2px dashed rgba(56,189,248,.45);
+
+    border-radius:22px;
+
+    padding:60px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.upload-area:hover{
+
+    background:rgba(37,99,235,.08);
+
+    border-color:#38bdf8;
+
+}
+
+.upload-area.dragover{
+
+    background:rgba(37,99,235,.15);
+
+    border-color:#60a5fa;
+
+}
+
+.upload-area i{
+
+    font-size:70px;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+
+}
+
+.upload-area h2{
+
+    color:white;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.upload-area p{
+
+    color:#94a3b8;
+
+}
+
+.upload-btn{
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================================
+                    PREVIEW
+=========================================================*/
+
+.preview-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:30px;
+
+}
+
+#previewImage{
+
+    max-width:100%;
+
+    max-height:500px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.upload-actions{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/*=========================================================
+                EXTRACTED TEXT
+=========================================================*/
+
+.extracted-card{
+
+    padding:28px;
+
+}
+
+#ocrText{
+
+    width:100%;
+
+    min-height:300px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    resize:vertical;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+                OCR RESULT
+=========================================================*/
+
+#ocrResults{
+
+    display:grid;
+
+    gap:22px;
+
+}
+
+.result-card{
+
+    padding:24px;
+
+}
+
+.result-card h3{
+
+    color:white;
+
+    margin-bottom:16px;
+
+}
+
+.result-card ul{
+
+    padding-left:18px;
+
+}
+
+.result-card li{
+
+    margin-bottom:10px;
+
+    color:#d1d5db;
+
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:22px;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+.upload-area{
+
+    padding:35px;
+
+}
+
+.upload-area h2{
+
+    font-size:24px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.result-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.upload-area{
+
+    padding:25px;
+
+}
+
+.upload-area i{
+
+    font-size:55px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.upload-btn{
+
+    width:100%;
+
+}
+
+}

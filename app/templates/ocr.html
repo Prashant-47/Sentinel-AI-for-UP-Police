@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="ocr-page">
+
+    <!-- ====================================== -->
+    <!-- HEADER -->
+    <!-- ====================================== -->
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-camera"></i>
+
+                OCR Complaint Scanner
+
+            </h1>
+
+            <p>
+
+                Upload scanned or handwritten complaints. Sentinel AI extracts
+                the text and automatically performs Complaint Intelligence.
+
+            </p>
+
+        </div>
+
+        <div class="status-badge">
+
+            <span class="status-dot"></span>
+
+            OCR Engine Ready
+
+        </div>
+
+    </div>
+
+    <!-- ====================================== -->
+    <!-- UPLOAD -->
+    <!-- ====================================== -->
+
+    <div class="glass upload-card">
+
+        <div class="upload-area" id="uploadArea">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <h2>
+
+                Drag & Drop Complaint Image
+
+            </h2>
+
+            <p>
+
+                JPG · PNG · JPEG
+
+            </p>
+
+            <input
+
+                type="file"
+
+                id="ocrFile"
+
+                accept="image/*"
+
+                hidden>
+
+            <button
+                class="upload-btn"
+                id="browseBtn">
+
+                Browse File
+
+            </button>
+
+        </div>
+
+        <div class="preview-container">
+
+            <img
+
+                id="previewImage"
+
+                style="display:none;">
+
+        </div>
+
+        <div class="upload-actions">
+
+            <button
+
+                id="extractBtn"
+
+                class="analyze-btn">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Extract & Analyze
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ====================================== -->
+    <!-- OCR LOADING -->
+    <!-- ====================================== -->
+
+    <div
+        class="thinking-card"
+        id="ocrThinking"
+        style="display:none;">
+
+        <div class="card-header-custom">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            OCR + Sentinel AI
+
+        </div>
+
+        <div class="thinking-line">
+
+            Uploading Image...
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width:100%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-line">
+
+            Extracting Text...
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width:100%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="thinking-line">
+
+            AI Complaint Analysis...
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width:100%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ====================================== -->
+    <!-- OCR TEXT -->
+    <!-- ====================================== -->
+
+    <div
+        id="ocrTextCard"
+        class="glass extracted-card"
+        style="display:none;">
+
+        <div class="card-header-custom">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            Extracted Complaint
+
+        </div>
+
+        <textarea
+
+            id="ocrText"
+
+            rows="10">
+
+        </textarea>
+
+    </div>
+
+    <!-- ====================================== -->
+    <!-- AI RESULT -->
+    <!-- ====================================== -->
+
+    <div id="ocrResults">
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/ocr.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,613 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard-page">
+
+    <!-- ===================================== -->
+    <!-- HERO -->
+    <!-- ===================================== -->
+
+    <section class="hero-panel glass">
+
+        <div class="hero-left">
+
+            <div class="hero-badge">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Sentinel AI v1.0
+
+            </div>
+
+            <h1>
+
+                Police Smart Investigation Command Center
+
+            </h1>
+
+            <p>
+
+                AI Powered Investigation Copilot for Uttar Pradesh Police.
+
+                Analyze complaints, generate FIRs, perform OCR extraction,
+                assist investigations and provide actionable intelligence.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/complaint" class="hero-btn primary">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    Complaint Intelligence
+
+                </a>
+
+                <a href="/fir" class="hero-btn">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    Generate FIR
+
+                </a>
+
+                <a href="/ocr" class="hero-btn">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    OCR Scanner
+
+                </a>
+
+                <a href="/knowledge" class="hero-btn">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Knowledge AI
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="ai-core">
+
+                <div class="core-ring ring1"></div>
+
+                <div class="core-ring ring2"></div>
+
+                <div class="core-ring ring3"></div>
+
+                <div class="core-center">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- KPI CARDS -->
+    <!-- ===================================== -->
+
+    <section class="kpi-grid">
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon blue">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+            <div>
+
+                <span>Total Complaints</span>
+
+                <h2 id="complaintCounter">0</h2>
+
+            </div>
+
+        </div>
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon green">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+            </div>
+
+            <div>
+
+                <span>AI FIR Generated</span>
+
+                <h2 id="firCounter">0</h2>
+
+            </div>
+
+        </div>
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon red">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+            <div>
+
+                <span>High Priority</span>
+
+                <h2 id="priorityCounter">0</h2>
+
+            </div>
+
+        </div>
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon cyan">
+
+                <i class="fa-solid fa-microchip"></i>
+
+            </div>
+
+            <div>
+
+                <span>AI Accuracy</span>
+
+                <h2>
+
+                    98%
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon orange">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div>
+
+                <span>Cases Solved</span>
+
+                <h2 id="solvedCounter">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="kpi-card glass">
+
+            <div class="kpi-icon purple">
+
+                <i class="fa-solid fa-stopwatch"></i>
+
+            </div>
+
+            <div>
+
+                <span>Average AI Time</span>
+
+                <h2>
+
+                    3 sec
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ===================================== -->
+    <!-- ANALYTICS -->
+    <!-- ===================================== -->
+
+    <section class="analytics-grid">
+
+        <!-- Crime Trend -->
+
+        <div class="glass chart-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Weekly Crime Trend
+
+            </div>
+
+            <canvas id="crimeTrendChart"></canvas>
+
+        </div>
+
+        <!-- Crime Distribution -->
+
+        <div class="glass chart-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Crime Distribution
+
+            </div>
+
+            <canvas id="crimePieChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- AI INSIGHTS -->
+    <!-- ===================================== -->
+
+    <section class="dashboard-grid">
+
+        <div class="glass insights-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-brain"></i>
+
+                AI Intelligence Insights
+
+            </div>
+
+            <div class="insight success">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Vehicle theft complaints increased by 18% this week.
+
+            </div>
+
+            <div class="insight warning">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                Three complaints require immediate investigation.
+
+            </div>
+
+            <div class="insight info">
+
+                <i class="fa-solid fa-camera"></i>
+
+                CCTV evidence available in two pending investigations.
+
+            </div>
+
+            <div class="insight danger">
+
+                <i class="fa-solid fa-user-secret"></i>
+
+                One suspected repeat offender detected.
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+
+        <div class="glass activity-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Recent Activity
+
+            </div>
+
+            <ul class="activity-list">
+
+                <li>
+
+                    <span class="activity-dot green"></span>
+
+                    FIR generated using AI.
+
+                    <small>2 min ago</small>
+
+                </li>
+
+                <li>
+
+                    <span class="activity-dot blue"></span>
+
+                    Complaint analyzed successfully.
+
+                    <small>7 min ago</small>
+
+                </li>
+
+                <li>
+
+                    <span class="activity-dot orange"></span>
+
+                    OCR completed for handwritten complaint.
+
+                    <small>14 min ago</small>
+
+                </li>
+
+                <li>
+
+                    <span class="activity-dot red"></span>
+
+                    High Priority Vehicle Theft detected.
+
+                    <small>25 min ago</small>
+
+                </li>
+
+                <li>
+
+                    <span class="activity-dot cyan"></span>
+
+                    Knowledge Assistant answered BNS query.
+
+                    <small>34 min ago</small>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+        <!-- ===================================== -->
+    <!-- INVESTIGATION QUEUE + RECENT COMPLAINTS -->
+    <!-- ===================================== -->
+
+    <section class="dashboard-grid">
+
+        <!-- Investigation Queue -->
+
+        <div class="glass queue-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Investigation Queue
+
+            </div>
+
+            <div class="queue-item high">
+
+                <div>
+
+                    <h4>Vehicle Theft</h4>
+
+                    <span>Kidwai Nagar</span>
+
+                </div>
+
+                <span class="priority high">HIGH</span>
+
+            </div>
+
+            <div class="queue-item medium">
+
+                <div>
+
+                    <h4>Cyber Fraud</h4>
+
+                    <span>Govind Nagar</span>
+
+                </div>
+
+                <span class="priority medium">MEDIUM</span>
+
+            </div>
+
+            <div class="queue-item low">
+
+                <div>
+
+                    <h4>Neighbour Dispute</h4>
+
+                    <span>Swaroop Nagar</span>
+
+                </div>
+
+                <span class="priority low">LOW</span>
+
+            </div>
+
+            <div class="queue-item medium">
+
+                <div>
+
+                    <h4>Missing Person</h4>
+
+                    <span>Kalyanpur</span>
+
+                </div>
+
+                <span class="priority medium">MEDIUM</span>
+
+            </div>
+
+        </div>
+
+        <!-- Recent Complaints -->
+
+        <div class="glass complaints-card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Recent Complaints
+
+            </div>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Complaint</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>#UP1021</td>
+
+                        <td>Vehicle Theft</td>
+
+                        <td><span class="status high">High</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>#UP1022</td>
+
+                        <td>Cyber Crime</td>
+
+                        <td><span class="status medium">Medium</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>#UP1023</td>
+
+                        <td>Domestic Violence</td>
+
+                        <td><span class="status high">High</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>#UP1024</td>
+
+                        <td>Neighbour Dispute</td>
+
+                        <td><span class="status low">Low</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SYSTEM HEALTH -->
+    <!-- ===================================== -->
+
+    <section class="glass system-card">
+
+        <div class="card-title">
+
+            <i class="fa-solid fa-server"></i>
+
+            Sentinel AI System Health
+
+        </div>
+
+        <div class="health-grid">
+
+            <div class="health-item">
+
+                <span class="health-dot green"></span>
+
+                Gemini AI Connected
+
+            </div>
+
+            <div class="health-item">
+
+                <span class="health-dot green"></span>
+
+                Complaint Engine Active
+
+            </div>
+
+            <div class="health-item">
+
+                <span class="health-dot green"></span>
+
+                FIR Generator Ready
+
+            </div>
+
+            <div class="health-item">
+
+                <span class="health-dot green"></span>
+
+                OCR Scanner Ready
+
+            </div>
+
+            <div class="health-item">
+
+                <span class="health-dot orange"></span>
+
+                Face Matcher Coming Soon
+
+            </div>
+
+            <div class="health-item">
+
+                <span class="health-dot green"></span>
+
+                Database Connected
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+{% endblock %}

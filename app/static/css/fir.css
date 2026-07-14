@@ -1,0 +1,64 @@
+.sentinel-toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    color:white;
+
+    padding:15px 22px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.3s;
+
+    z-index:9999;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+.sentinel-toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* ======================================
+        SPACING BETWEEN FIR CARDS
+====================================== */
+
+.fir-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:30px;
+
+    margin-top:35px;
+
+}
+
+.fir-card{
+
+    margin-bottom:0;
+
+}
+
+.full-width{
+
+    grid-column:1/-1;
+
+    margin-top:10px;
+
+}

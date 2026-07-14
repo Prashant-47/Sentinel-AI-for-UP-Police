@@ -1,0 +1,634 @@
+/*==================================================
+            SENTINEL AI LAYOUT
+==================================================*/
+
+.main-panel{
+
+    margin-left:290px;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.35s ease;
+
+}
+
+.content-area{
+
+    flex:1;
+
+    width:100%;
+
+    padding:30px;
+
+    overflow:visible;
+
+}
+
+/*==================================================
+                    TOPBAR
+==================================================*/
+
+.topbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:900;
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 35px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(7,17,31,.78);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==================================================
+                SEARCH
+==================================================*/
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    width:430px;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.search-box:hover{
+
+    border-color:#38bdf8;
+
+}
+
+.search-box:focus-within{
+
+    border-color:#38bdf8;
+
+    box-shadow:0 0 25px rgba(56,189,248,.18);
+
+}
+
+.search-box i{
+
+    color:#38bdf8;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/*==================================================
+                RIGHT
+==================================================*/
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/*==================================================
+                STATUS CARD
+==================================================*/
+
+.topbar-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+.ai-online{
+
+    color:#22c55e;
+
+}
+
+.pulse{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    animation:aiPulse 1.4s infinite;
+
+}
+
+@keyframes aiPulse{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.35);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+}
+
+/*==================================================
+                ICON BUTTONS
+==================================================*/
+
+.icon-button{
+
+    position:relative;
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.icon-button:hover{
+
+    background:rgba(59,130,246,.18);
+
+    transform:translateY(-3px);
+
+}
+
+.icon-button i{
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.notification-count{
+
+    position:absolute;
+
+    top:7px;
+
+    right:7px;
+
+    min-width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+}
+/*==================================================
+                PROFILE CARD
+==================================================*/
+
+.profile-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:8px 18px 8px 8px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.profile-card:hover{
+
+    border-color:#38bdf8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+.profile-card img{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid rgba(56,189,248,.5);
+
+}
+
+.profile-card h5{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.profile-card span{
+
+    color:#94a3b8;
+
+    font-size:12px;
+
+}
+
+/*==================================================
+                LIVE CLOCK
+==================================================*/
+
+#liveClock{
+
+    font-weight:600;
+
+    color:#ffffff;
+
+    letter-spacing:.5px;
+
+}
+
+/*==================================================
+                CONTENT AREA
+==================================================*/
+
+.content-area{
+
+    animation:pageFade .45s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            GLASS EFFECT HELPERS
+==================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+.glow-blue{
+
+    box-shadow:
+
+    0 0 20px rgba(56,189,248,.18),
+
+    0 0 40px rgba(56,189,248,.08);
+
+}
+
+/*==================================================
+            HOVER ANIMATIONS
+==================================================*/
+
+.topbar-card,
+
+.search-box,
+
+.icon-button,
+
+.profile-card{
+
+    transition:
+
+        transform .3s,
+
+        box-shadow .3s,
+
+        border-color .3s,
+
+        background .3s;
+
+}
+
+.topbar-card:hover{
+
+    border-color:#38bdf8;
+
+    transform:translateY(-2px);
+
+}
+
+.icon-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+}
+
+.icon-button:hover::after{
+
+    animation:iconShine .8s;
+
+}
+
+@keyframes iconShine{
+
+    from{
+
+        transform:translateX(-120%);
+
+    }
+
+    to{
+
+        transform:translateX(120%);
+
+    }
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+.search-box{
+
+    width:320px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.main-panel{
+
+    margin-left:0;
+
+}
+
+.topbar{
+
+    padding:18px;
+
+}
+
+.search-box{
+
+    width:230px;
+
+}
+
+.profile-card div{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.topbar{
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    height:auto;
+
+}
+
+.topbar-left{
+
+    width:100%;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.topbar-right{
+
+    width:100%;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+}
+
+.content-area{
+
+    padding:18px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.ai-online{
+
+    display:none;
+
+}
+
+.topbar-card{
+
+    padding:10px 12px;
+
+    font-size:12px;
+
+}
+
+.icon-button{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+.profile-card img{
+
+    width:44px;
+
+    height:44px;
+
+}
+
+}
+
+/*==================================================
+                END OF FILE
+==================================================*/

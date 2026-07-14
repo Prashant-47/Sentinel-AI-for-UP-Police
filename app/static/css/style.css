@@ -1,0 +1,103 @@
+/*=========================================
+    GLOBAL RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    height:100%;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:#07111F;
+
+    color:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+/*=========================================
+    APP CONTAINER
+=========================================*/
+
+.app-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/*=========================================
+    COMMON PAGE WIDTH
+=========================================*/
+
+.page{
+
+    width:95%;
+
+    max-width:1600px;
+
+    margin:auto;
+
+    padding:35px 0;
+
+}
+
+/*=========================================
+    COMMON GLASS CARD
+=========================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+/*=========================================
+    CUSTOM SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07111F;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#38bdf8;
+
+}

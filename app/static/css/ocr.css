@@ -182,6 +182,10 @@
 
     line-height:1.8;
 
+    box-sizing:border-box;
+
+    overflow-wrap:break-word;
+
 }
 
 /*=========================================================
@@ -200,6 +204,8 @@
 
     padding:24px;
 
+    overflow:hidden;
+
 }
 
 .result-card h3{
@@ -207,6 +213,10 @@
     color:white;
 
     margin-bottom:16px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -221,6 +231,10 @@
     margin-bottom:10px;
 
     color:#d1d5db;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 

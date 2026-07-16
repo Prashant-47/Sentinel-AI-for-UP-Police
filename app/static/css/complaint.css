@@ -111,6 +111,10 @@ body::before{
 
     margin-bottom:10px;
 
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
 }
 
 .hero p{
@@ -118,6 +122,10 @@ body::before{
     color:var(--muted);
 
     font-size:18px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -172,6 +180,10 @@ textarea{
     border:1px solid rgba(255,255,255,.08);
 
     transition:.35s;
+
+    box-sizing:border-box;
+
+    overflow-wrap:break-word;
 
 }
 
@@ -375,6 +387,8 @@ textarea:focus{
 
     animation:fadeUp .45s ease;
 
+    overflow:hidden;
+
 }
 
 .result-card:hover{
@@ -423,6 +437,10 @@ textarea:focus{
 
     font-weight:700;
 
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
 }
 
 .result-card p{
@@ -432,6 +450,10 @@ textarea:focus{
     line-height:1.8;
 
     font-size:15px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 /* ==========================================
@@ -496,6 +518,12 @@ textarea:focus{
 
     word-break:break-word;
 
+    display:block;
+
+    overflow-wrap:break-word;
+
+    text-overflow:ellipsis;
+
 }
 
 /* ==========================================
@@ -523,6 +551,10 @@ textarea:focus{
     border-bottom:1px solid rgba(255,255,255,.05);
 
     line-height:1.6;
+
+    overflow:hidden;
+
+    word-break:break-word;
 
 }
 
@@ -624,7 +656,7 @@ textarea:focus{
 
     overflow-y:auto;
 
-    overflow-x:hidden;
+    overflow-x:auto;
 
     white-space:pre-wrap;
 
@@ -708,6 +740,10 @@ textarea:focus{
     text-align:center;
 
     padding:18px;
+
+    overflow:hidden;
+
+    word-break:break-word;
 
 }
 

@@ -527,6 +527,107 @@
 
 /*==================================================
                 RESPONSIVE
+=================================================*/
+
+/* ==================================================
+   TOPBAR CONSISTENCY FIXES
+   Ensures the topbar looks identical across all pages.
+   Only layout/visual consistency changes — no design
+   alteration.
+   ================================================== */
+
+.topbar{
+    box-sizing:border-box;
+    height:85px; /* enforce consistent height */
+    padding:18px 35px; /* enforce consistent padding */
+}
+
+.topbar .topbar-left,
+.topbar .topbar-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.topbar .topbar-left{
+    flex:1 1 auto;
+    min-width:0; /* allow children to shrink (search input) */
+}
+
+.topbar .topbar-right{
+    flex:0 0 auto;
+}
+
+/* Make search box stable and prevent it from overflowing */
+.search-box{
+    max-width:540px;
+    width:100%;
+    min-width:0;
+}
+
+/* Ensure inputs inside topbar don't push layout */
+.search-box input{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* Normalize card/button sizes in topbar */
+.topbar-card, .icon-button, .profile-card{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    box-sizing:border-box;
+}
+
+.icon-button{
+    width:52px;
+    height:52px;
+}
+
+/* Profile text should truncate if too long */
+.profile-card h5,
+.profile-card span{
+    display:block;
+    min-width:0;
+}
+
+.profile-card h5{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+/* Small screens adjustments to keep consistent layout */
+@media(max-width:992px){
+    .topbar{
+        padding:12px 18px;
+    }
+    .search-box{
+        max-width:320px;
+    }
+}
+
+@media(max-width:768px){
+    .topbar{
+        height:auto;
+        align-items:flex-start;
+        gap:12px;
+        flex-wrap:wrap;
+        padding:12px;
+    }
+    .topbar .topbar-left{
+        width:100%;
+    }
+    .topbar .topbar-right{
+        width:100%;
+        justify-content:space-between;
+    }
+}
+
+
+/*==================================================
+                RESPONSIVE
 ==================================================*/
 
 @media(max-width:1200px){

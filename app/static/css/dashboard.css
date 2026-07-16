@@ -100,6 +100,12 @@
 
     margin-bottom:20px;
 
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
 }
 
 .hero-left h1{
@@ -114,6 +120,10 @@
 
     margin-bottom:20px;
 
+    overflow-wrap:break-word;
+
+    word-break:break-word;
+
 }
 
 .hero-left p{
@@ -123,6 +133,10 @@
     line-height:1.9;
 
     max-width:720px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -329,6 +343,8 @@
 
     cursor:pointer;
 
+    overflow:hidden;
+
 }
 
 .kpi-card:hover{
@@ -471,6 +487,12 @@
 
     margin-bottom:24px;
 
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
 }
 
 .card-title i{
@@ -507,7 +529,7 @@
 
     display:flex;
 
-    align-items:center;
+    align-items:flex-start;
 
     gap:15px;
 
@@ -518,6 +540,10 @@
     border-radius:14px;
 
     font-weight:500;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -592,6 +618,10 @@
     border-bottom:1px solid rgba(255,255,255,.06);
 
     color:white;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -676,6 +706,8 @@
 
     transition:.3s;
 
+    overflow:hidden;
+
 }
 
 .queue-item:hover{
@@ -693,6 +725,10 @@
     margin:0;
 
     font-size:18px;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -771,6 +807,10 @@
     border-bottom:1px solid rgba(255,255,255,.06);
 
     color:#d1d5db;
+
+    overflow-wrap:break-word;
+
+    word-break:break-word;
 
 }
 
@@ -966,6 +1006,12 @@
 .health-grid{
 
     grid-template-columns:1fr;
+
+}
+
+.content-area{
+
+    padding:18px;
 
 }
 

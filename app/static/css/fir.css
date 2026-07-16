@@ -64,3 +64,36 @@
     margin-top:10px;
 
 }
+
+/* FIR PAGE CUSTOM ADJUSTMENTS */
+n/* Ensure the AI thinking glass has internal padding so the h2 and its content do not start at the border */
+#firThinking{
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+}
+
+/* Layout the FIR result container as a grid so dynamically appended child result cards have gaps */
+#firResult{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+/* Keep the original wrapper appearance but as a distinct element so child result-cards get their own borders */
+.result-wrapper{
+
+    padding:22px;
+
+}
+
+/* Make sure child result cards inside the result container behave normally (no negative margins) */
+#firResult > .result-card{
+
+    margin:0;
+
+}

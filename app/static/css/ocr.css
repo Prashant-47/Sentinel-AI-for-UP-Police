@@ -110,37 +110,6 @@
 
 }
 
-/* Analyze / Extract button styling to match primary look */
-.analyze-btn{
-
-    border:none;
-
-    cursor:pointer;
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    padding:14px 28px;
-
-    border-radius:12px;
-
-    background:linear-gradient(135deg,#2563eb,#38bdf8);
-
-    transition:.35s;
-
-}
-
-.analyze-btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 12px 30px rgba(59,130,246,.25);
-
-}
-
 /*=========================================================
                     PREVIEW
 =========================================================*/

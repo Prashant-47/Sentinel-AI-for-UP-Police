@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fir.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
-    <!-- Small override stylesheet added to enable safe collapsible sidebar & mobile overlay without changing core styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar-overrides.css') }}">
     
 
 </head>
@@ -38,13 +36,7 @@
 
 <div class="app-container">
 
-    <!-- Hidden checkbox used to toggle sidebar for desktop and mobile (CSS-only) -->
-    <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox" aria-hidden="true">
-
     {% include 'components/sidebar.html' %}
-
-    <!-- Overlay that appears on mobile when sidebar is open; clicking it will toggle the checkbox (close the sidebar) -->
-    <label for="sidebarToggle" class="overlay" aria-hidden="true"></label>
 
     <div class="main-panel">
 
